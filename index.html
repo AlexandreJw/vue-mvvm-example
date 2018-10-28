@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">{{name}}<input type="text" id="a" v-model="text">{{text}}</div>
+</body>
+<script src="dep.js"></script>
+<script src="index.js"></script>
+<script src="obsever.js"></script>
+<script src="compile.js"></script>
+<script src=watcher.js></script>
+<script>
+  var vm = new Vue({
+    el: 'app',
+    data: {
+      text: 'hello word',
+      name: 'hujianwei'
+    }
+  })
+  document.getElementById('a').addEventListener('input', function() {
+    vm.text = this.value
+    vm.name = this.value
+  })
+</script>
+</html>
