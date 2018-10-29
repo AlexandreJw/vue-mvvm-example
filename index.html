@@ -7,6 +7,7 @@
 <body>
 <div id="app">{{name}}<input type="text" id="a" v-model="text">{{text}}</div>
 </body>
+<script src="Batcher.js"></script>
 <script src="dep.js"></script>
 <script src="index.js"></script>
 <script src="obsever.js"></script>
@@ -19,10 +20,6 @@
       text: 'hello word',
       name: 'hujianwei'
     }
-  })
-  document.getElementById('a').addEventListener('input', function() {
-    vm.text = this.value
-    vm.name = this.value
   })
 </script>
 </html>
