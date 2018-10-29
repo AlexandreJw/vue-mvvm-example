@@ -27,6 +27,7 @@ Batcher.prototype.push = function (job) {
     this.has[id] = true;
     if (!this.waiting) {
       this.waiting = true;
+      /// 微队列和宏队列  微队列先执行 故优先先使用promise
       if ("Promise" in window) {
         Promise.resolve().then( ()=> {
           this.flush();
